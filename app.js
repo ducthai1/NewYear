@@ -10,6 +10,15 @@ let x = setInterval(function stime() {
   hours %= 24;
   minutes %= 60;
   seconds %= 60;
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
   document.getElementById("days").innerText = days;
   document.getElementById("hours").innerText = hours;
   document.getElementById("minutes").innerText = minutes;
