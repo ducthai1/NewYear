@@ -10,7 +10,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <h1>Thời gian chỉ còn...</h1>
+      <h1>Đếm ngược giao thừa...</h1>
       <div class="box-time">
         <div class="time">
           <p>Ngày</p>
@@ -29,12 +29,38 @@
           <span id="seconds">seconds</span>
         </div>
       </div>
+      <div class="music">
+        <div class="button button-74">Click dô đây nghe nhạc nè</div>
+
+        <div class="button2 button-74">Pause</div>
+      </div>
     </div>
     <audio id="song">
-      <source src="image/nhac.mp3" type="audio/mp3" />
+      <source src="image/nhac3.mp3" type="audio/mp3" />
     </audio>
   </body>
   <script src="app.js"></script>
-  <script src="intro.js"></script>
+  <script>
+    var buttonSong = document.querySelector(".button");
+    var buttonSong2 = document.querySelector(".button2");
+    var mySong = document.getElementById("song");
+    buttonSong.onclick = function () {
+      if (mySong.paused) {
+        mySong.play();
+        buttonSong2.style.display = "block";
+      } else {
+        buttonSong2.style.display = "none";
+        mySong.pause();
+      }
+    };
+  </script>
+
+  <script>
+    var buttonSong2 = document.querySelector(".button2");
+
+    buttonSong2.onclick = function () {
+      mySong.pause();
+    };
+  </script>
 </html>
 <!-- end -->
