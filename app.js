@@ -29,3 +29,4 @@ let x = setInterval(function stime() {
     window.location.href = "intro.html";
   }
 }, 0.1);
+// end
